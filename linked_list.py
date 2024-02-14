@@ -82,22 +82,3 @@ class LinkedList:
                 previous.next = last_match.next
         else:
             raise ValueError("Число не найдено!")
-
-my_list = LinkedList()
-
-my_list.append(5)
-my_list.append(10)
-my_list.append(15)
-
-print(len(my_list))  # Выведет: 3
-
-my_list.remove_first()
-
-my_list.remove_last()
-
-my_list.remove_at(0)
-
-try:
-    my_list.remove_first_value(10)
-except ValueError as e:
-    print(e) #Число не найдено!
