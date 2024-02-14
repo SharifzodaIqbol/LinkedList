@@ -82,3 +82,5 @@ class LinkedList:
                 previous.next = last_match.next
         else:
             raise ValueError("Число не найдено!")
+
+my_list = LinkedList()
