@@ -1,7 +1,3 @@
-class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -9,7 +5,12 @@ class LinkedList:
 
     def __len__(self):
         return self.length
-
+    
+    class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+    
     def append_begin(self, data):
         new_node = Node(data)
         new_node.next = self.head
