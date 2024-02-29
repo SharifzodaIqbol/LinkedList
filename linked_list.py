@@ -29,13 +29,13 @@ class LinkedList:
 
     def remove_first(self):
         if not self.head:
-            raise ValueError('Связанный список пуст')
+            raise ValueError('Односвязанный список пуст')
         self.head = self.head.next
         self.length -= 1
 
     def remove_last(self):
         if not self.head:
-            raise ValueError('Связанный список пуст')
+            raise ValueError('Односвязанный список пуст')
         if not self.head.next:
             self.head = None
         else:
@@ -47,7 +47,7 @@ class LinkedList:
 
     def remove_at(self, index):
         if index < 0 or index >= self.length:
-            raise ValueError('Недопустимый индекс')
+            raise ValueError('Invalid index')
         if index == 0:
             self.head = self.head.next
         else:
@@ -59,7 +59,7 @@ class LinkedList:
 
     def remove_first_value(self, value):
         if not self.head:
-            raise ValueError('Связанный список пуст')
+            raise ValueError('Односвязанный список пуст')
         
         if self.head.data == value:
             self.head = self.head.next
@@ -77,7 +77,7 @@ class LinkedList:
 
     def remove_last_value(self, value):
         if not self.head:
-            raise ValueError('Связанный список пуст')
+            raise ValueError('Односвязанный список пуст')
         
         if self.head.data == value:
             self.head = self.head.next
